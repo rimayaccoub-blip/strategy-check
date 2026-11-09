@@ -239,7 +239,10 @@ input[type=tel]{direction:ltr;text-align:right}
 <script>
 (function(){
   // جمهور برا البلاد (src فيه world أو cur=usd): الدخل بالدولار. القيم (data-v) والنقاط ما بتتغير.
-  var USD = /world|cur=usd/i.test(location.search);
+  // 9.11: كمان حسب منطقة الوقت بالجهاز. مين مش بالبلاد (خليج وغيره) بيشوف دولار تلقائيًا.
+  var TZ = ''; try { TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch(x){}
+  var IN_IL = /^Asia\/(Jerusalem|Tel_Aviv|Hebron|Gaza)$/.test(TZ) || TZ === '';
+  var USD = /world|cur=usd/i.test(location.search) || (!/cur=ils/i.test(location.search) && !IN_IL);
   if (USD) {
     // 4 خيارات بس (طلب ريما 5.11). الخيارات اللي مش بالقائمة بتنخفى.
     var USD_LABELS = {
