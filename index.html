@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>جلسة فحص الفجوة | ريما يعقوب</title>
+<meta name="description" content="جلسة مجانية لفحص الفجوة بين وين البزنس تبعك اليوم ووين بدك توصل/ي. أربع أسئلة قصيرة، وإذا الجلسة مناسبة الك بتحجز/ي موعدك فورًا." />
+<meta property="og:title" content="جلسة مجانية لفحص الفجوة بالبزنس تبعك" />
+<meta property="og:description" content="أربع أسئلة قصيرة مع ريما يعقوب، وإذا الجلسة مناسبة الك بتحجز/ي موعدك فورًا." />
+<meta property="og:type" content="website" />
+
+<!-- ========= الاعدادات ========= -->
+<script>
+  window.CALENDAR_URL  = 'https://pay.rimayaqub.com/widget/bookings/rima-program-call';
+  window.FOCUS_URL     = 'https://rimayaqub.ravpage.co.il/focus';
+  window.COURSE_URL    = 'https://rimayaqub.com/minicourse?utm_source=strategy-check&utm_medium=notyet&utm_campaign=lt2000';
+  window.INSTAGRAM_URL = 'https://www.instagram.com/rima_yaqub/';
+  window.META_PIXEL_ID = '914783969729003';
+</script>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', window.META_PIXEL_ID);
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=914783969729003&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel -->
+
+<style>
+:root{
+  --ink-1:#0A0A0B;
+  --ink-2:#151318;
+  --ink-3:#0E0D10;
+  --gold:#BF9B45;
+  --gold-2:#E3C578;
+  --gold-soft:rgba(191,155,69,.15);
+  --txt:#F0EADD;
+  --txt-mute:rgba(240,234,221,.72);
+  --line:rgba(232,220,200,.14);
+  --panel:rgba(232,220,200,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Segoe UI','Arial',sans-serif;
+  background:
+    radial-gradient(1000px 560px at 78% -8%, rgba(191,155,69,.20), transparent 62%),
+    linear-gradient(168deg,var(--ink-1),var(--ink-2) 46%,var(--ink-3));
+  background-attachment:fixed;
+  color:var(--txt);
+  line-height:1.8;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:560px;margin:0 auto;padding:28px 16px 48px}
+
+.hero{text-align:center;margin-bottom:22px}
+.badge{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--gold),var(--gold-2));
+  color:#0A0A0B;font-weight:800;font-size:12.5px;
+  padding:5px 18px;border-radius:50px;margin-bottom:14px;
+}
+.hero h1{font-size:clamp(24px,6vw,34px);font-weight:900;line-height:1.35;margin-bottom:10px}
+.hero p{color:var(--txt-mute);font-size:16px}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:26px 20px;
+}
+
+.progress{height:5px;background:var(--line);border-radius:5px;overflow:hidden;margin-bottom:8px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .35s}
+.count{font-size:13px;color:var(--txt-mute);margin-bottom:18px}
+
+.step{display:none;animation:in .3s ease}
+.step.active{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.q{font-size:20px;font-weight:800;line-height:1.5;margin-bottom:16px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{
+  width:100%;text-align:right;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  color:var(--txt);
+  font:inherit;font-size:16px;
+  padding:14px 16px;border-radius:14px;
+  cursor:pointer;transition:border-color .2s,background .2s;
+}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{border-color:var(--gold-2);background:var(--gold-soft)}
+
+label{display:block;font-size:14.5px;color:var(--txt-mute);margin:14px 0 6px}
+input[type=text],input[type=tel],input[type=email]{
+  width:100%;font:inherit;font-size:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);border-radius:12px;
+  color:var(--txt);padding:13px 14px;outline:none;
+}
+input:focus{border-color:var(--gold)}
+input[type=tel]{direction:ltr;text-align:right}
+.err{color:#f0a08a;font-size:14px;margin-top:10px;min-height:20px}
+
+.btn{
+  display:block;width:100%;margin-top:18px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-2));
+  color:#0A0A0B;font:inherit;font-weight:800;font-size:17px;
+  border:0;border-radius:14px;padding:15px;cursor:pointer;
+  text-align:center;text-decoration:none;
+}
+.btn:disabled{opacity:.6;cursor:wait}
+.back{
+  background:none;border:0;color:var(--txt-mute);font:inherit;font-size:14px;
+  margin-top:14px;cursor:pointer;text-decoration:underline;
+}
+
+.result h2{font-size:23px;font-weight:900;line-height:1.45;margin-bottom:12px}
+.result p{color:var(--txt-mute);margin-bottom:10px;font-size:16px}
+.hidden{display:none}
+.trust{text-align:center;color:var(--txt-mute);font-size:13.5px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="badge">جلسة مجانية</span>
+    <h1>جلسة مجانية لفحص <span style="color:var(--gold-2)">الفجوة بالبزنس تبعك</span></h1>
+    <p>مش جلسة استشارة عملية. هي جلسة تشخيص بنشوف فيها وين انت اليوم، ووين بدك توصل/ي، وشو الفجوة بينهم.</p>
+    <p>أربع أسئلة قصيرة، أقل من دقيقة.<br>إذا الجلسة مناسبة الك، بتحجز/ي موعدك فورًا.</p>
+  </header>
+
+  <main class="card">
+    <div id="quiz">
+      <div class="progress"><span id="bar"></span></div>
+      <div class="count" id="count"></div>
+
+      <!-- سؤال 1 -->
+      <div class="step active" data-key="type">
+        <div class="q">شو نوع البزنس تبعك؟</div>
+        <div class="opts">
+          <button type="button" class="opt" data-v="clinic">عيادة أو مركز تجميل أو علاج</button>
+          <button type="button" class="opt" data-v="service">مقدم/ة خدمة: معالج/ة، مدرب/ة، مستشار/ة</button>
+          <button type="button" class="opt" data-v="team">بزنس خدمات عنده فريق</button>
+          <button type="button" class="opt" data-v="products">ببيع منتجات</button>
+        </div>
+      </div>
+
+      <!-- سؤال 2 -->
+      <div class="step" data-key="income">
+        <div class="q">قديش دخل البزنس بالشهر تقريبًا؟</div>
+        <div class="opts">
+          <button type="button" class="opt" data-v="lt7">أقل من <bdi>7,000 ₪</bdi> (حوالي <bdi>2,000</bdi> دولار)</button>
+          <button type="button" class="opt" data-v="7-10">بين <bdi>7,000</bdi> و <bdi>10,000 ₪</bdi></button>
+          <button type="button" class="opt" data-v="10-20">بين <bdi>10,000</bdi> و <bdi>20,000 ₪</bdi></button>
+          <button type="button" class="opt" data-v="20-50">بين <bdi>20,000</bdi> و <bdi>50,000 ₪</bdi></button>
+          <button type="button" class="opt" data-v="50-100">بين <bdi>50,000</bdi> و <bdi>100,000 ₪</bdi></button>
+          <button type="button" class="opt" data-v="100+">أكثر من <bdi>100,000 ₪</bdi></button>
+        </div>
+      </div>
+
+      <!-- سؤال 3 -->
+      <div class="step" data-key="pain">
+        <div class="q">شو أكثر إشي واقف بطريقك اليوم؟</div>
+        <div class="opts">
+          <button type="button" class="opt" data-v="unstable">الدخل مش ثابت، شهر منيح وشهر لا</button>
+          <button type="button" class="opt" data-v="profit">في دخل، بس الربح مش عم يبين</button>
+          <button type="button" class="opt" data-v="ads">جربت/ي إعلانات وسوشيال وما في نتيجة</button>
+          <button type="button" class="opt" data-v="direction">مش واضح/ة شو الخطوة الجاية</button>
+        </div>
+      </div>
+
+      <!-- سؤال 4 -->
+      <div class="step" data-key="ready">
+        <div class="q">لو الجلسة بيّنت إنك بحاجة لمرافقة، إيمتى بتكون/ي جاهز/ة تبلش/ي؟</div>
+        <div class="opts">
+          <button type="button" class="opt" data-v="now">فورًا، خلال الشهر الجاي</button>
+          <button type="button" class="opt" data-v="3m">خلال الثلاث شهور الجاية</button>
+          <button type="button" class="opt" data-v="looking">حاليًا بس بدي أفهم وين أنا</button>
+        </div>
+      </div>
+
+      <!-- الفورم: بيانات التواصل -->
+      <form class="step" id="leadForm" name="strategy-check" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="strategy-check" />
+        <p class="hidden"><label>لا تعبّي: <input name="bot-field" /></label></p>
+        <input type="hidden" name="type" />
+        <input type="hidden" name="income" />
+        <input type="hidden" name="pain" />
+        <input type="hidden" name="ready" />
+        <input type="hidden" name="result" />
+        <input type="hidden" name="source" />
+
+        <div class="q">آخر خطوة، لوين نبعتلك تأكيد الموعد؟</div>
+        <label for="f-name">الاسم</label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required />
+        <label for="f-phone">رقم الواتساب</label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="05X-XXXXXXX" required />
+        <label for="f-email">الإيميل</label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required />
+        <div class="err" id="err"></div>
+        <button type="submit" class="btn" id="submitBtn">شوف/ي إذا الجلسة مناسبة الك</button>
+      </form>
+
+      <button type="button" class="back hidden" id="backBtn">رجوع</button>
+    </div>
+
+    <!-- نتيجة: مناسب/ة -->
+    <div class="result hidden" id="fit">
+      <h2>الجلسة مناسبة الك</h2>
+      <p>من إجاباتك واضح إنه البزنس تبعك جاهز للخطوة الجاية. بالجلسة منفحص الفجوة بين الدخل اللي بتعمله اليوم ونظام دخل ثابت. هي جلسة تشخيص، مش استشارة عملية، وبتطلع منها بصورة واضحة شو ناقص البزنس تبعك.</p>
+      <p>اختار/ي الموعد اللي بناسبك:</p>
+      <a class="btn" id="calBtn" href="#">احجز/ي موعدك هلأ</a>
+    </div>
+
+    <!-- نتيجة: مش مناسب/ة حاليًا -->
+    <div class="result hidden" id="notfit">
+      <h2>شكرًا على صراحتك</h2>
+      <p id="notfitText"></p>
+      <a class="btn" id="notfitBtn" href="#"></a>
+    </div>
+  </main>
+
+  <p class="trust">ريما يعقوب، مدربة ومستشارة أعمال<br>سبع سنين مرافقة لأصحاب وصاحبات بزنس الخدمات</p>
+</div>
+
+<script>
+(function(){
+  // جمهور برا البلاد (src فيه world أو cur=usd): الدخل بالدولار. القيم (data-v) والنقاط ما بتتغير.
+  var USD = /world|cur=usd/i.test(location.search);
+  if (USD) {
+    // 4 خيارات بس (طلب ريما 5.11). الخيارات اللي مش بالقائمة بتنخفى.
+    var USD_LABELS = {
+      'lt7':    'أقل من <bdi>2,000</bdi> دولار',
+      '10-20':  'بين <bdi>2,000</bdi> و <bdi>5,000</bdi> دولار',
+      '20-50':  'بين <bdi>5,000</bdi> و <bdi>15,000</bdi> دولار',
+      '100+':   'أكثر من <bdi>15,000</bdi> دولار'
+    };
+    document.querySelectorAll('.step[data-key="income"] .opt').forEach(function(b){
+      if (USD_LABELS[b.dataset.v]) b.innerHTML = USD_LABELS[b.dataset.v];
+      else b.style.display = 'none';
+    });
+    var ph = document.getElementById('f-phone');
+    if (ph) ph.placeholder = '+971 5X XXX XXXX';
+  }
+  var answers = {};
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
+  var current = 0;
+  var bar = document.getElementById('bar');
+  var count = document.getElementById('count');
+  var backBtn = document.getElementById('backBtn');
+  var form = document.getElementById('leadForm');
+
+  function track(name, data){
+    try { if (window.fbq) fbq('trackCustom', name, data || {}); } catch(e){}
+  }
+
+  function show(i){
+    steps[current].classList.remove('active');
+    current = i;
+    steps[current].classList.add('active');
+    bar.style.width = ((current) / steps.length * 100) + '%';
+    count.textContent = current < steps.length - 1
+      ? 'سؤال ' + (current + 1) + ' من ' + (steps.length - 1)
+      : 'خطوة أخيرة';
+    backBtn.classList.toggle('hidden', current === 0);
+    track('StrategyCheckStep', { step: current + 1 });
+  }
+
+  steps.forEach(function(step, i){
+    step.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        step.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('sel'); });
+        btn.classList.add('sel');
+        answers[step.dataset.key] = btn.dataset.v;
+        setTimeout(function(){ show(i + 1); }, 220);
+      });
+    });
+  });
+
+  backBtn.addEventListener('click', function(){ if (current > 0) show(current - 1); });
+
+  // في إشي نشتغل عليه؟ الدخل لحاله مش معيار، بيتجمع مع الجاهزية
+  var INCOME_PTS = { 'lt7':0, '7-10':0, '10-20':1, '20-50':2, '50-100':3, '100+':3 };
+  var READY_PTS  = { 'now':3, '3m':2, 'looking':0 };
+  var FIT_SCORE  = 3;
+  function evaluate(a){
+    // قرار ريما 1.11: بدون تقييد، الكل بيحجز (في منهم مناسبين لـ Momentum). الإجابات بتنحفظ للتحضير للمكالمة.
+    return 'fit';
+  }
+
+  function cleanPhone(p){ return (p || '').replace(/[^\d+]/g, ''); }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var err = document.getElementById('err');
+    var name = form.elements['name'].value.trim();
+    var phone = cleanPhone(form.elements['phone'].value);
+    var email = form.elements['email'].value.trim();
+
+    if (name.length < 2) { err.textContent = 'اكتب/ي اسمك لو سمحت'; return; }
+    if (phone.replace(/\D/g,'').length < 9) { err.textContent = 'رقم الواتساب مش كامل'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'الإيميل مش صحيح'; return; }
+    err.textContent = '';
+
+    var result = evaluate(answers);
+    ['type','income','pain','ready'].forEach(function(k){ form.elements[k].value = answers[k] || ''; });
+    form.elements['result'].value = result === 'fit' ? 'مناسب/ة' : (result === 'products' ? 'منتجات' : (result === 'low' ? 'دخل أقل من 2000$' : 'مش جاهز/ة'));
+    form.elements['source'].value = location.search.replace(/^\?/, '') || 'direct';
+
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true; btn.textContent = 'لحظة...';
+
+    try { localStorage.setItem('strategy_check', JSON.stringify({name:name, phone:phone, email:email, answers:answers, result:result})); } catch(x){}
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).catch(function(){}).then(function(){ finish(result, name, phone, email); });
+  });
+
+  function finish(result, name, phone, email){
+    document.getElementById('quiz').classList.add('hidden');
+
+    if (result === 'fit') {
+      var parts = name.split(/\s+/);
+      var q = new URLSearchParams({
+        first_name: parts[0] || '',
+        last_name: parts.slice(1).join(' '),
+        phone: phone,
+        email: email
+      });
+      var url = window.CALENDAR_URL + (window.CALENDAR_URL.indexOf('?') > -1 ? '&' : '?') + q.toString();
+      document.getElementById('calBtn').href = url;
+      document.getElementById('fit').classList.remove('hidden');
+      try { if (window.fbq) fbq('track', 'Lead', { content_name: 'strategy-check' }); } catch(x){}
+      track('StrategyCheckFit', { income: answers.income, ready: answers.ready });
+      setTimeout(function(){ location.href = url; }, 3500);
+      return;
+    }
+
+    var text = document.getElementById('notfitText');
+    var cta = document.getElementById('notfitBtn');
+    if (result === 'products') {
+      text.textContent = 'الجلسة مبنية لبزنس الخدمات بالذات، وما بدي آخذ من وقتك جلسة مش مبنية لنوع البزنس تبعك. على الانستغرام بشارك محتوى عن التسعير والربح ممكن يفيدك.';
+      cta.textContent = 'تابع/ي على الانستغرام';
+      cta.href = window.INSTAGRAM_URL;
+    } else if (result === 'low') {
+      text.textContent = 'من إجاباتك، البزنس تبعك لسا بمرحلة البناء، والجلسة هاي مبنية لبزنس دخله فوق 2,000 دولار بالشهر. هاد مش لأنه ما في إشي تشتغل عليه، بالعكس. الخطوة اللي بتناسبك هلأ هي دورة معادلة التسعير: بتتعلم كيف تسعّر خدمتك صح وتعرض قيمتها، وهاد أول إشي بيرفع الدخل. ولما يوصل دخلك لهالمرحلة، بكون مبسوطة نحكي.';
+      cta.textContent = 'تفاصيل دورة معادلة التسعير';
+      cta.href = window.COURSE_URL;
+    } else {
+      text.textContent = 'حسب إجاباتك، الجلسة المجانية مش الخطوة الأنسب الك هلأ. الخطوة اللي بتناسب مرحلتك هي مقابلة Focus: جلسة مركزة بتطلع منها مع خطة واضحة للبزنس تبعك.';
+      cta.textContent = 'تفاصيل مقابلة Focus';
+      cta.href = window.FOCUS_URL;
+    }
+    document.getElementById('notfit').classList.remove('hidden');
+    track('StrategyCheckNotFit', { reason: result, income: answers.income, ready: answers.ready });
+  }
+
+  show(0);
+})();
+</script>
+</body>
+</html>
