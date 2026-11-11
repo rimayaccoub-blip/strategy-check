@@ -12,6 +12,7 @@
 <!-- ========= الاعدادات ========= -->
 <script>
   window.CALENDAR_URL  = 'https://pay.rimayaqub.com/widget/bookings/rima-program-call';
+  window.SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbys1KDse7mIcneuAFzXTy2JSFTjYDvtxkVQgNPQb9zveiH3pFnt6U_g9p1pOgTppJ7U7A/exec'; // strategy-check-backend.gs (Web app /exec)
   window.FOCUS_URL     = 'https://rimayaqub.ravpage.co.il/focus';
   window.COURSE_URL    = 'https://rimayaqub.com/minicourse?utm_source=strategy-check&utm_medium=notyet&utm_campaign=lt2000';
   window.INSTAGRAM_URL = 'https://www.instagram.com/rima_yaqub/';
@@ -328,11 +329,20 @@ input[type=tel]{direction:ltr;text-align:right}
 
     try { localStorage.setItem('strategy_check', JSON.stringify({name:name, phone:phone, email:email, answers:answers, result:result})); } catch(x){}
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
-    }).catch(function(){}).then(function(){ finish(result, name, phone, email); });
+    // 11.11: الحفظ بـ Apps Script (شيت + إيميل لريما). ما بنستنى أكثر من 1.5 ثانية.
+    var payload = {
+      name: name, phone: phone, email: email,
+      type: answers.type || '', income: answers.income || '', pain: answers.pain || '', ready: answers.ready || '',
+      result: form.elements['result'].value, source: form.elements['source'].value,
+      cur: USD ? 'usd' : 'ils'
+    };
+    var done = false;
+    function go(){ if (done) return; done = true; finish(result, name, phone, email); }
+    setTimeout(go, 1500);
+    try {
+      fetch(window.SHEET_ENDPOINT + '?data=' + encodeURIComponent(JSON.stringify(payload)), { mode: 'no-cors', keepalive: true })
+        .catch(function(){}).then(go);
+    } catch(x){ go(); }
   });
 
   function finish(result, name, phone, email){
